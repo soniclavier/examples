@@ -12,10 +12,8 @@ spec:
     spec:
       containers:
       - name: jobmanager
-        image: {{ .Values.image }}:{{ .Values.imageTag }}
-        imagePullPolicy: {{ .Values.imagePullPolicy }}
-        args:
-        - jobmanager
+        image: {{ .Values.jobImage }}:{{ .Values.jobImageTag }}
+        imagePullPolicy: {{ .Values.jobImagePullPolicy }}
         ports:
         - containerPort: 6123
           name: rpc
